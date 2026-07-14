@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sort -t. -k2 -n)",
+      "Bash(node -e ' *)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 -c \"c=open\\('index.html'\\).read\\(\\); print\\(c.count\\('<div'\\), c.count\\('</div>'\\)\\)\")",
+      "Bash(awk '/id=\"mobile-menu\"/{flag=0} /<!-- Hero Section -->/{flag=1} /<footer/{flag=0} flag' index.html)",
+      "Bash(python3)",
+      "Bash(python3 -)",
+      "Bash(awk '/<nav/,/<\\\\/nav>/' dona/index.html)",
+      "Bash(awk '/<div$/,0' dona/index.html)",
+      "Read(//usr/local/bin/**)",
+      "Bash(npx -v)",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(command -v chromium-cli)",
+      "Bash(npm ls *)",
+      "Bash(python3 -m pip --version)",
+      "Bash(curl -sS -m 5 -o /dev/null -w \"%{http_code}\\\\n\" https://registry.npmjs.org/)",
+      "Bash(python3 -m pip install --quiet playwright)",
+      "Bash(python3 -m playwright install chromium --with-deps)",
+      "Bash(python3 \"/private/tmp/claude-501/-Users-andreamenga-Downloads-www-thesmuggle-it-copy-3/0d9b55f7-37fd-45b4-8544-5a3f28eae4f0/scratchpad/test_i18n.py\")",
+      "Bash(python3 \"/private/tmp/claude-501/-Users-andreamenga-Downloads-www-thesmuggle-it-copy-3/0d9b55f7-37fd-45b4-8544-5a3f28eae4f0/scratchpad/diag_i18n.py\")",
+      "Bash(python3 \"/private/tmp/claude-501/-Users-andreamenga-Downloads-www-thesmuggle-it-copy-3/0d9b55f7-37fd-45b4-8544-5a3f28eae4f0/scratchpad/test_i18n_v2.py\")",
+      "Bash(pkill -f \"http.server 8899\")"
+    ]
+  }
+}
