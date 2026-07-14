@@ -1,0 +1,191 @@
+/* 
+   THE SMUGGLE - Global Stylesheet
+   Consolidated, highly polished CSS design system for a premium static site.
+   Ensures robust viewport scaling, beautiful ambient glows, Safari-safe image clipping,
+   and fluid, responsive typography.
+*/
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0a0b0d;
+}
+::-webkit-scrollbar-thumb {
+    background: #ef845030;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #EF8450;
+}
+
+body {
+    background-color: #111217;
+    color: #fafaf9;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Luxury Background Ambient Glowing Mesh */
+body::before, body::after {
+    content: "";
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    border-radius: 50%;
+    filter: blur(160px);
+    opacity: 0.14;
+    z-index: 0;
+    pointer-events: none;
+}
+
+body::before {
+    top: 10%;
+    left: -15%;
+    background: radial-gradient(circle, #EF8450, transparent 70%);
+}
+
+body::after {
+    bottom: 15%;
+    right: -15%;
+    background: radial-gradient(circle, #EF8450, transparent 70%);
+}
+
+/* Custom Text Selection */
+::selection {
+    background: #EF8450;
+    color: #0a0a0a;
+}
+
+/* Fluid responsive typography with clamp() to prevent overlaps */
+.hero-title {
+    font-size: clamp(2.5rem, 8.5vw, 6.5rem) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.04em !important;
+    margin-bottom: 1.5rem;
+}
+
+.inner-hero-title {
+    font-size: clamp(2.25rem, 7vw, 5rem) !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.03em !important;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-size: clamp(1.85rem, 4.5vw, 3.5rem) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.02em !important;
+}
+
+.massive-display-title {
+    font-size: clamp(2.25rem, 6.5vw, 4.75rem) !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.03em !important;
+}
+
+.massive-cta-title {
+    font-size: clamp(2.5rem, 7.5vw, 5.75rem) !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.04em !important;
+}
+
+/* Text Reveal Animation Prep */
+.text-reveal {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.text-reveal span {
+    display: inline-block;
+    transform: translateY(110%);
+}
+
+/* Lenis Smooth Scrolling Integration */
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+/* Magnetic Button Utility */
+.magnetic-btn {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Premium Glassmorphism Card Utility with subtle hover interaction */
+.glass-card {
+    background: rgba(255, 255, 255, 0.025);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px rgba(255, 255, 255, 0.06) solid;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+    border-color: rgba(239, 132, 80, 0.25);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 15px 45px -10px rgba(239, 132, 80, 0.04);
+    transform: translateY(-4px);
+}
+
+/* Bulletproof border-radius overflow clipping fix for iOS/macOS Safari */
+.overflow-hidden, 
+.rounded-xl, 
+.rounded-2xl, 
+.rounded-3xl, 
+.rounded-full,
+.glass-card, 
+[class*="rounded-"],
+[class*="aspect-"] {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Custom Arrow / Dash List Styling */
+.custom-list li {
+    position: relative;
+    padding-left: 24px;
+}
+
+.custom-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #EF8450;
+    font-weight: bold;
+}
+
+/* Mobile navbar readability during scroll */
+@media (max-width: 767px) {
+    nav {
+        mix-blend-mode: normal !important;
+        background: rgba(17, 18, 23, 0.78);
+        border-bottom: 1px solid rgba(239, 132, 80, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        transition: background-color 0.25s ease, border-color 0.25s ease;
+    }
+
+    nav.nav-scrolled {
+        background: rgba(17, 18, 23, 0.92);
+        border-bottom-color: rgba(239, 132, 80, 0.35);
+    }
+}
