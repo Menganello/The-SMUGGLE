@@ -23,7 +23,10 @@
       "Bash(python3 \"/private/tmp/claude-501/-Users-andreamenga-Downloads-www-thesmuggle-it-copy-3/0d9b55f7-37fd-45b4-8544-5a3f28eae4f0/scratchpad/test_i18n.py\")",
       "Bash(python3 \"/private/tmp/claude-501/-Users-andreamenga-Downloads-www-thesmuggle-it-copy-3/0d9b55f7-37fd-45b4-8544-5a3f28eae4f0/scratchpad/diag_i18n.py\")",
       "Bash(python3 \"/private/tmp/claude-501/-Users-andreamenga-Downloads-www-thesmuggle-it-copy-3/0d9b55f7-37fd-45b4-8544-5a3f28eae4f0/scratchpad/test_i18n_v2.py\")",
-      "Bash(pkill -f \"http.server 8899\")"
+      "Bash(pkill -f \"http.server 8899\")",
+      "Bash(curl -s -o /dev/null -w \"root: %{http_code}\\\\n\" http://localhost:4173/)",
+      "Bash(curl -s -o /dev/null -w \"base path: %{http_code}\\\\n\" http://localhost:4173/The-SMUGGLE/)",
+      "Bash(curl -s http://localhost:4173/The-SMUGGLE/)"
     ]
   }
 }
