@@ -133,6 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Show menu
                 mobileMenu.classList.remove("hidden");
+                mobileMenu.classList.add("flex");
                 setTimeout(() => {
                     mobileMenu.classList.add("opacity-100");
                     mobileMenu.classList.remove("pointer-events-none");
@@ -153,6 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 mobileMenu.classList.add("pointer-events-none");
                 setTimeout(() => {
                     mobileMenu.classList.add("hidden");
+                    mobileMenu.classList.remove("flex");
                 }, 500);
 
                 // Resume scrolling with Lenis
