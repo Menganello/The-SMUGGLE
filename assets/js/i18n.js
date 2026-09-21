@@ -455,8 +455,6 @@
   "donclinical.25": { it: "BIC", en: "BIC" },
   "donclinical.26": { it: "Causale", en: "Payment Reference" },
   "donclinical.27": { it: "Tale erogazione liberale è interamente deducibile dal reddito complessivo (IRPEF) ai sensi dell'art. 10, comma 1, lett. l-quater del TUIR.", en: "This donation is fully deductible from total income (IRPEF) pursuant to Article 10, paragraph 1, letter l-quater of the TUIR." },
-  "donclinical.28": { it: "Vai al Portale Fondazione", en: "Go to Foundation Portal" },
-  "donclinical.29": { it: "In alternativa al bonifico, puoi effettuare la donazione direttamente tramite il portale ufficiale della Fondazione.", en: "As an alternative to a bank transfer, you can donate directly through the Foundation's official portal." },
   "donclinical.30": { it: "Tecnologia Umanitaria", en: "Humanitarian Technology" },
   "donclinical.31": { it: "Un respiratore<br /><span class=\"text-primary italic\">autonomo per la vita.</span>", en: "An autonomous<br /><span class=\"text-primary italic\">respirator for life.</span>" },
   "donclinical.32": { it: "Il dispositivo SAFER (Simplified Automated Resuscitator) risponde alla tragica realtà della mortalità neonatale causata da asfissia alla nascita in contesti ospedalieri a basse risorse tecnologiche in Africa.", en: "The SAFER device (Simplified Automated Resuscitator) addresses the tragic reality of neonatal mortality caused by birth asphyxia in low-resource hospital settings in Africa." },
