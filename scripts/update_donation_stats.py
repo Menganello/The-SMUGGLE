@@ -49,7 +49,7 @@ def fetch_gofundme_html(url: str) -> str:
             )
         },
     )
-    with urllib.request.urlopen(req, timeout=20, context=_SSL_CONTEXT) as resp:
+    with urllib.request.urlopen(req, timeout=45, context=_SSL_CONTEXT) as resp:
         return resp.read().decode("utf-8", errors="ignore")
 
 
